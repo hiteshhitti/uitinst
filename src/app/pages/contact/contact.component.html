@@ -1,0 +1,45 @@
+<mat-card class="contact-card">
+  <mat-card-header>
+    <mat-card-title>Contact Us</mat-card-title>
+    <mat-card-subtitle>We would love to hear from you!</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form #contactForm="ngForm" (ngSubmit)="submitForm()" novalidate>
+      <div *ngIf="nameField.invalid && nameField.touched" class="error">Name is required.</div>
+      <input type="text" [(ngModel)]="name" name="name" placeholder="Your Name" required title="please enter your name" #nameField="ngModel" />
+      <div *ngIf="emailField.invalid && emailField.touched" class="error">Enter a valid email.</div>
+      <input type="email" [(ngModel)]="email" name="email" placeholder="Your Email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"  title="please enter your email" #emailField="ngModel" />
+      <div *ngIf="mobileField.invalid && mobileField.touched" class="error">
+        Enter a valid 10-digit mobile number.
+      </div>
+      <input type="text" [(ngModel)]="mobile" name="mobile" placeholder="Your Mobile" required pattern="^[0-9]{10}$" title="please enter your 10 digit mobile number" #mobileField="ngModel" />
+      <div *ngIf="messageField.invalid && messageField.touched" class="error">Message is required.</div>
+      <textarea [(ngModel)]="message" name="message" placeholder="Your Message" required #messageField="ngModel"></textarea>
+      
+      <button type="submit" [disabled]="contactForm.invalid">Send Message</button>
+    </form>
+
+    <div *ngIf="success" class="success-msg">Your message has been sent!</div>
+
+    <!-- Contact Info Block -->
+    <div class="contact-info">
+      <h3>Visit Us At:</h3>
+      <p><strong>Address:</strong> SCF-37, 2nd Floor, Phase-11, Mohali</p>
+      <p><strong>Contact:</strong> <a href="tel:8427837089">84278 37089</a>, <a href="tel:8427887089">84278 87089</a></p>
+    </div>
+
+    <!-- Google Map -->
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.3101192430936!2d76.74159777541647!3d30.681549474609053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fedb1cc185993%3A0x155a2b6b5ada5eec!2sUltimate%20institute%20of%20Technologies!5e0!3m2!1sen!2sin!4v1746618392760!5m2!1sen!2sin"
+        width="800"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </mat-card-content>
+</mat-card>

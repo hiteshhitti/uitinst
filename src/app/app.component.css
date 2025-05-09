@@ -1,0 +1,46 @@
+/* Navbar Fixing */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+/* Navbar Links */
+.navbar ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.navbar a:hover {
+  background-color: #4CAF50;
+}
+
+/* Add padding to body so content doesn't hide behind navbar */
+body {
+  margin: 0;
+  padding-top: 60px; /* same or slightly more than navbar height */
+  scroll-behavior: smooth;
+}
+
+/* Fix section scroll position */
+section {
+  scroll-margin-top: 70px;
+}

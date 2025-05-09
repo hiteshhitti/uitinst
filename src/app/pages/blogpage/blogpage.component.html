@@ -1,0 +1,9 @@
+<!-- blog-page.component.html -->
+<h2>Latest Blogs</h2>
+<div *ngFor="let blog of blogs">
+  <h3>{{ blog.title }}</h3>
+  <img [src]="blog.imageUrl" width="300" />
+  <p>{{ blog.content }}</p>
+  <small>{{ blog.date | date:'short' }}</small>
+  <hr />
+</div>

@@ -1,0 +1,6 @@
+<!-- blog-admin.component.html -->
+<h2>Add Blog</h2>
+<input [(ngModel)]="title" placeholder="Title" /><br />
+<input [(ngModel)]="imageUrl" placeholder="Image URL" /><br />
+<textarea [(ngModel)]="content" placeholder="Content"></textarea><br />
+<button (click)="addBlog()">Add Blog</button>

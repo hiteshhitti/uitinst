@@ -1,0 +1,32 @@
+<div *ngIf="true" class="banner" [@fadeIn]>
+  <div class="banner-overlay">
+    <h1>ULTIMATE INSTITUTE OF TECHNOLOGIES</h1>
+    <p>Explore our courses and get started today!</p>
+  </div>
+</div>
+
+
+
+
+
+<section id="career" class="career-section">
+  <div class="career-container">
+    <mat-card *ngIf="true" class="career-card" [@fadeIn]>
+      <mat-card-content class="career-content">
+        <div class="career-text">
+          <h3>Data Analytics</h3>
+          <h3>Web Development</h3>
+          <ul>
+            <li>Get job assured after 1 year</li>
+            <li>Max practical based study</li>
+            <li>Training of soft skills included</li>
+            <li>Project support</li>
+          </ul>
+        </div>
+        <div class="career-image" [@zoomIn]>
+          <img mat-card-image src="assets/images/career.jpg" alt="career Image" />
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
